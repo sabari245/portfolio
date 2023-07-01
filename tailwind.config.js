@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,7 +15,26 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        sans: ['Inter Variable', "Inter", ...defaultTheme.fontFamily.sans],
+        serif: ['Source Serif Pro', ...defaultTheme.fontFamily.serif],
+      },
+      colors: {
+        wob: {
+          level1: '#EBEBEB',
+          level2: '#D2D2D2',
+          level3: '#BFBFBF',
+        },
+        bow: {
+          level1: '#141414',
+          level2: '#404040',
+          level3: '#7E7E7E',
+        },
+        primary: "#4ADE80",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }
