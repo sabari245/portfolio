@@ -48,19 +48,33 @@ export function MainHeading(props: PropsWithChildren<MainHeadingProps>) {
   );
 }
 
-interface HeadingProps extends VariantProps<typeof heading_cva> {}
+interface HeadingProps extends VariantProps<typeof heading_cva> {
+  className?: string;
+}
 export function Heading(props: PropsWithChildren<HeadingProps>) {
   return (
-    <h2 className={heading_cva({ theme: props.theme ?? "light" })}>
+    <h2
+      className={heading_cva({
+        theme: props.theme ?? "light",
+        className: props.className ?? "",
+      })}
+    >
       {props.children}
     </h2>
   );
 }
 
-interface ContentProps extends VariantProps<typeof content_cva> {}
+interface ContentProps extends VariantProps<typeof content_cva> {
+  className?: string;
+}
 export function Content(props: PropsWithChildren<ContentProps>) {
   return (
-    <p className={content_cva({ theme: props.theme ?? "light" })}>
+    <p
+      className={content_cva({
+        theme: props.theme ?? "light",
+        className: props.className ?? "",
+      })}
+    >
       {props.children}
     </p>
   );

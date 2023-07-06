@@ -4,6 +4,10 @@ import ArticleSection from "@/components/sections/articles";
 import Hero from "@/components/sections/hero";
 import InfoSection from "@/components/sections/info";
 import ProjectSection from "@/components/sections/project";
+import ChatBox from "./completion";
+import ContactSection from "@/components/sections/contact";
+
+export const runtime = "edge";
 
 export default function Home() {
   return (
@@ -26,7 +30,10 @@ export default function Home() {
         image="https://images.unsplash.com/photo-1553481187-be93c21490a9"
       />
       <ArticleSection />
-      <InfoSection />
+      <InfoSection>
+        <ChatBox />
+      </InfoSection>
+      <ContactSection />
     </main>
   );
 }

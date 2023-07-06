@@ -23,7 +23,7 @@ export default function ProjectSection(props: ProjectSectionProps) {
     <section
       className={projectSection_cva({ alignment: props.alignment ?? "left" })}
     >
-      <div className="flex items-center justify-center w-1/2 h-screen">
+      <div className="z-30 flex items-center justify-center w-1/2 h-screen bg-white">
         <div className="flex flex-col items-start w-3/4 gap-20">
           <p className="text-xl text-bow-level3">Project #{props.number}</p>
           <div className="flex flex-col items-start w-3/4 gap-4">
@@ -34,7 +34,9 @@ export default function ProjectSection(props: ProjectSectionProps) {
         </div>
       </div>
       <div
-        className="w-1/2 h-screen bg-center bg-cover"
+        className={`fixed top-0  ${
+          props.alignment == "left" ? "right-0" : "left-0"
+        } z-0 w-1/2 h-screen bg-center bg-cover`}
         style={{
           backgroundImage: `url('${props.image}')`,
         }}

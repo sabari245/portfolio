@@ -3,7 +3,7 @@ import { MainHeading } from "@/components/basic/text";
 
 export default function Hero() {
   return (
-    <section className="relative flex items-center justify-center w-screen h-screen bg-black">
+    <section className="relative z-30 flex items-center justify-center w-screen h-screen bg-black">
       <div className="absolute top-8 right-12">
         <ul className="flex text-lg font-semibold gap-11 text-wob-level3">
           <li>

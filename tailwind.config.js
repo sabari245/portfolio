@@ -30,7 +30,7 @@ module.exports = {
           level2: '#404040',
           level3: '#7E7E7E',
         },
-        primary: "#4ADE80",
+        primary: "#24C15E",
       }
     },
   },
